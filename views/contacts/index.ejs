@@ -1,0 +1,22 @@
+<!-- views/contacts/index.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %> <!-- 1 -->
+  </head>
+  <body>
+    <%- include('../partials/nav') %> <!-- 2 -->
+
+    <div class="contact contact-index">
+      <h2>Index</h2>
+      <ul>
+        <% contacts.forEach(function(contact) { %> <!-- 3 -->
+          <li>
+            <%= contact.name %>
+          </li>
+        <% }) %>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!-- views/contacts/new.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('../partials/head') %>
+  </head>
+  <body>
+    <%- include('../partials/nav') %>
+
+    <div class="contact contact-new">
+      <h2>New</h2>
+      <form class="contact-form" action="/contacts" method="post">
+        <div>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" value="">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" value="">
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" name="phone" value="">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+/* public/css/master.css */
+
+.contact h2{
+    color: tomato;
+  }
+  .contact .contact-form label{
+    display: inline-block;
+    width: 70px;
+  }
