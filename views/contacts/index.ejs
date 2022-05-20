@@ -1,4 +1,4 @@
-<!-- views/contacts/index.ejs-->
+<!-- views/contacts/index.ejs -->
 
 <!DOCTYPE html>
 <html>
@@ -8,12 +8,12 @@
   <body>
     <%- include('../partials/nav') %>
 
-    <div class="contact contact-index">
+    <div class="container contact contact-index">
       <h2>Index</h2>
-      <ul>
+      <ul class="list-group">
         <% contacts.forEach(function(contact) { %>
-          <li>
-            <a href="/contacts/<%= contact._id %>"><%= contact.name %></a> <!-- 1 -->
+          <li class="list-group-item">
+            <a href="/contacts/<%= contact._id %>"><%= contact.name %></a>
           </li>
         <% }) %>
       </ul>

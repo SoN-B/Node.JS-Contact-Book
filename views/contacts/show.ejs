@@ -1,5 +1,4 @@
 <!-- views/contacts/show.ejs -->
-
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,18 +7,20 @@
   <body>
     <%- include('../partials/nav') %>
 
-    <div class="contact contact-show">
+    <div class="container contact contact-show">
       <h2>Show</h2>
-      <div>
-        <h3><%= contact.name%></h3>
-        <label>Email</label><span><%= contact.email %></span>
-        <br>
-        <label>Phone</label><span><%= contact.phone %></span>
+      <div class="card">
+        <div class="card-body">
+          <h3 class="card-title"><%= contact.name%></h3>
+          <label>Email</label><span><%= contact.email %></span>
+          <br>
+          <label>Phone</label><span><%= contact.phone %></span>
+        </div>
       </div>
-      <div class="contact-menu">
-        <a href="/contacts/<%= contact._id %>/edit">Edit</a> <!-- 1 -->
-        <form action="/contacts/<%= contact._id %>?_method=delete" method="post"> <!-- 2 -->
-          <a href="#" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
+      <div class="contact-menu mt-2">
+        <a href="/contacts/<%= contact._id %>/edit" class="btn btn-light mr-2">Edit</a>
+        <form action="/contacts/<%= contact._id %>?_method=delete" method="post">
+          <a href="#" class="btn btn-light" onclick="confirm('Do you want to delete this?')?this.parentElement.submit():null;">Delete</a>
         </form>
       </div>
     </div>

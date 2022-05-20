@@ -1,5 +1,9 @@
 /* public/css/master.css */
 
+.contact .contact-form,
+.contact-index ul{
+  max-width: 500px;
+}
 .contact h2{
   color: tomato;
 }
