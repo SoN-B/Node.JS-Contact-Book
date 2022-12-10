@@ -43,7 +43,7 @@ router.get('/:id/edit', function(req, res){
 
 // update
 router.put('/:id', function(req, res){
-  Contact.findOneAndUpdate({_id:req.params.id}, req.body, function(err, contact){
+  Contact.findOneAndUpdate({_id:req.params.id}, req.body,{new:true},function(err, contact){
     if(err) return res.json(err);
     res.redirect('/contacts/'+req.params.id);
   });

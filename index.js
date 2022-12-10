@@ -24,8 +24,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
 // Routes
-app.use('/', require('./routes/home')); // 1
-app.use('/contacts', require('./routes/contacts')); // 2
+app.use('/', require('./routes/home'));
+app.use('/contacts', require('./routes/contacts'));
 
 // Port settin
 var port = 3000;
